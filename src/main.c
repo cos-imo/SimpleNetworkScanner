@@ -47,5 +47,4 @@ int main(int argc, char* *argv){
   for (index = optind; index < argc; index++)
     printf ("Non-option argument %s\n", argv[index]);
   return 0;
-  return 0;
 }
