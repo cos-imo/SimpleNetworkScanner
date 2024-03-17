@@ -14,5 +14,8 @@ main: src/main.o
 src/main.o: src/main.c
 	gcc -c -I include src/main.c -o src/main.o
 
+parseur:
+	gcc src/parse.c -Iinclude -o build/parse
+
 clean: 
 	rm -f *.o ./tests/*.o ./src/*.o ${ALL_OBJECTS} ${ALL_TEST_EXECUTABLES} ${ALL_EXECUTABLES}

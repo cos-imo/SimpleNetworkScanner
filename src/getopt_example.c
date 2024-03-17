@@ -8,7 +8,7 @@ main (int argc, char **argv)
 {
   int aflag = 0;
   int bflag = 0;
-  char *cvalue = null;
+  char *cvalue = NULL;
   int index;
   int c;
 
@@ -28,12 +28,12 @@ main (int argc, char **argv)
         break;
       case '?':
         if (optopt == 'c')
-          fprintf (stderr, "option -%c requires an argument.\n", optopt);
+          fprintf (stderr, "Option -%c requires an argument.\n", optopt);
         else if (isprint (optopt))
-          fprintf (stderr, "unknown option `-%c'.\n", optopt);
+          fprintf (stderr, "Unknown option `-%c'.\n", optopt);
         else
           fprintf (stderr,
-                   "unknown option character `\\x%x'.\n",
+                   "Unknown option character `\\x%x'.\n",
                    optopt);
         return 1;
       default:
@@ -44,6 +44,6 @@ main (int argc, char **argv)
           aflag, bflag, cvalue);
 
   for (index = optind; index < argc; index++)
-    printf ("non-option argument %s\n", argv[index]);
+    printf ("Non-option argument %s\n", argv[index]);
   return 0;
 }
