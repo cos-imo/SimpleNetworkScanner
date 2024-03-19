@@ -7,7 +7,7 @@
 int main(int argc, char* *argv){
   printf("Programme principal\n");
  
-
+  parse(argc, argv);
 
   return 0;
 }
